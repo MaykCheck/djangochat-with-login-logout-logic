@@ -1,0 +1,25 @@
+{% extends 'chatapp/base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'chatapp/login.css' %}">
+{%endblock%}
+
+{% block body %}
+<div class="card">
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-label">
+                {{ field.label_tag }}
+            </div>
+            <div class="form-input">
+                {{ field }}
+            </div>
+            {% endfor %}
+            <button class="buton" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

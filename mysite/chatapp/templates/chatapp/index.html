@@ -1,0 +1,24 @@
+{% extends 'chatapp/base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'chatapp/index.css' %}">
+{%endblock%}
+
+{% block body %}
+    <div class="header">
+        <h1>List of Rooms</h1>
+    </div>
+    {% if request.user.is_authenticated %}
+        {% for chatroom in chatrooms %}
+            <div class="card">
+                <div class="container">
+                        <a class="room" href ="{% url 'chatroom' chatroom.slug %}">{{ chatroom.name }}</a> </br>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    {% else %}
+        <h1 class="warning">This is a top secret encrypted message app, you need to sign in to see rooms!!!</h1>
+    {% endif %}
+{% endblock %}

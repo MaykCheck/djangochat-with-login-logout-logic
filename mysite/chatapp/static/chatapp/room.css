@@ -1,0 +1,48 @@
+.header {
+    color: whitesmoke;
+    text-align: center;
+    font-size: larger;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.message-content {
+    color: whitesmoke;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    background-color: #006466;
+    border-radius: 20px;
+    margin-left: 30%;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+.container {
+    padding: 20px 25px;
+}
+
+.nick {
+    font-weight: bold;
+}
+
+.mesaj-giris {
+    border-radius: 10px;
+    border: 1px solid #144552;
+    background-color: #144552;
+    outline: none;
+    color: white;
+    width: 80%;
+}
+
+.buton {
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #212f45;
+    color: whitesmoke;
+    background-color: #212f45;
+}
